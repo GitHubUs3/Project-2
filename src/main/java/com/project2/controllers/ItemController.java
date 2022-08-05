@@ -42,8 +42,8 @@ public class ItemController {
 		newItem.setId(id);
 		newItem.setName(name);
 		newItem.setPrice(price);
-		newItem.setStore((Set<Store>) store);
-		newItem.setCategory((Set<Category>) category);
+		newItem.setStore(store);
+		newItem.setCategory(category);
 		
 		itemRepository.save(newItem);
 	}

@@ -1,5 +1,7 @@
 package com.project2.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,7 +33,7 @@ public class ItemController {
 	}
 	
 	@PostMapping("/add")
-	public void addItemToBD(@RequestParam int id, @RequestParam String name, @RequestParam double price, @RequestParam Store store, @RequestParam Category category) {
+	public void addItemToBD(@RequestParam int id, @Valid @RequestParam String name, @RequestParam double price, @RequestParam Store store, @RequestParam Category category) {
 		Item newItem = new Item();
 		newItem.setId(id);
 		newItem.setName(name);

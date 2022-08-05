@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "Item")
 public class Item {
@@ -28,9 +30,11 @@ public class Item {
 	private double price;
 	
 	@OneToMany(mappedBy = "item") // DO NOT use Eager unless you 100% ALWAYS need the child record
+	@JsonIgnore // mappedBy side to prevent recursion
 	private Set<Store> store;
 	
-	@OneToMany(mappedBy = "item") // DO NOT use Eager unless you 100% ALWAYS need the child record
+	@OneToMany(mappedBy = "item") 
+	@JsonIgnore 
 	private Set<Category> category;
 
 	public Item() {

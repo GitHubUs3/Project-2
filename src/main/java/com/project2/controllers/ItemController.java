@@ -1,5 +1,7 @@
 package com.project2.controllers;
 
+import java.util.Set;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +42,8 @@ public class ItemController {
 		newItem.setId(id);
 		newItem.setName(name);
 		newItem.setPrice(price);
-		newItem.setStore(store);
-		newItem.setCategory(category);
+		newItem.setStore((Set<Store>) store);
+		newItem.setCategory((Set<Category>) category);
 		
 		itemRepository.save(newItem);
 	}

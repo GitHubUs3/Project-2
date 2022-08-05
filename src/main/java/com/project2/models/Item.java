@@ -27,12 +27,10 @@ public class Item {
 	@Column(name = "Price")
 	private double price;
 	
-	//@Column(name = "StoreId")
 	@OneToMany(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
 	@JoinColumn(name = "storeFK")
 	private Set<Store> store;
 	
-	//@Column(name = "CategoryId")
 	@OneToMany(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
 	@JoinColumn(name = "categoryFK")
 	private Set<Category> category;

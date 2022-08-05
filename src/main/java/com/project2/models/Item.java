@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,12 +27,12 @@ public class Item {
 	private double price;
 	
 	//@Column(name = "StoreId")
-	@ManyToOne(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
+	@OneToMany(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
 	@JoinColumn(name = "storeFK")
 	private Store store;
 	
 	//@Column(name = "CategoryId")
-	@ManyToOne(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
+	@OneToMany(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
 	@JoinColumn(name = "categoryFK")
 	private Category category;
 

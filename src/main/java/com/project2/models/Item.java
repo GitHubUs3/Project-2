@@ -1,5 +1,7 @@
 package com.project2.models;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -7,7 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -29,24 +30,22 @@ public class Item {
 	//@Column(name = "StoreId")
 	@OneToMany(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
 	@JoinColumn(name = "storeFK")
-	private Store store;
+	private Set<Store> store;
 	
 	//@Column(name = "CategoryId")
 	@OneToMany(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
 	@JoinColumn(name = "categoryFK")
-	private Category category;
+	private Set<Category> category;
 
 	public Item() {
 		super();
 	}
 
-	public Item(int id, String name, float price, Store store, Category category) {
+	public Item(int id, String name, float price) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.price = price;
-		this.store = store;
-		this.category = category;
 	}
 
 	public int getId() {
@@ -73,19 +72,19 @@ public class Item {
 		this.price = price2;
 	}
 
-	public Store getStore() {
+	public Set<Store> getStore() {
 		return store;
 	}
 
-	public void setStore(Store store) {
+	public void setStore(Set<Store> store) {
 		this.store = store;
 	}
 
-	public Category getCategory() {
+	public Set<Category> getCategory() {
 		return category;
 	}
 
-	public void setCategory(Category category) {
+	public void setCategory(Set<Category> category) {
 		this.category = category;
 	}
 

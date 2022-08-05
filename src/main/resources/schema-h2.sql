@@ -17,5 +17,5 @@ create table Item (
 	Name VARCHAR(50),
 	Price INT,
 	storeFK INT,
-	categoryFK INT
+	CategoryId INT
 );

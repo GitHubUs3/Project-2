@@ -22,13 +22,13 @@ insert into Store (StoreId, StoreName, Location) values (8, 'Wunsch, Metz and Wa
 insert into Store (StoreId, StoreName, Location) values (9, 'Thiel, Hamill and Block', '1 Stone Corner Way');
 insert into Store (StoreId, StoreName, Location) values (10, 'McGlynn-Paucek', '5887 Fuller Street');
 
-insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (1, 'Kanlam', '$5.33', 1, 1);
-insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (2, 'Hatity', '$3.74', 2, 2);
-insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (3, 'Biodex', '$2.42', 3, 3);
-insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (4, 'Transcof', '$9.64', 4, 4);
-insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (5, 'Aerified', '$1.94', 5, 5);
-insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (6, 'Wrapsafe', '$0.63', 6, 6);
-insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (7, 'Kanlam', '$4.20', 7, 7);
-insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (8, 'Aerified', '$5.04', 8, 8);
-insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (9, 'Pannier', '$4.16', 9, 9);
-insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (10, 'Zamit', '$3.91', 10, 10);
+insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (1, 'Cardguard', 45, 1, 1);
+insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (2, 'Alpha', 73, 2, 2);
+insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (3, 'Quo Lux', 37, 3, 3);
+insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (4, 'Latlux', 52, 4, 4);
+insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (5, 'Job', 50, 5, 5);
+insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (6, 'Y-find', 83, 6, 6);
+insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (7, 'Ronstring', 41, 7, 7);
+insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (8, 'Tresom', 84, 8, 8);
+insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (9, 'Cardguard', 100, 9, 9);
+insert into Item (ItemId, Name, Price, storeFK, categoryFK) values (10, 'Holdlamis', 69, 10, 10);

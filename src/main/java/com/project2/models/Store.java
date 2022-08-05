@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "Store")
@@ -20,6 +21,7 @@ public class Store {
 	private int id;
 	
 	@Column(name="StoreName")
+	@NotBlank
 	private String name;
 	
 	@Column(name="Location")

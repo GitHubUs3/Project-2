@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -24,6 +25,7 @@ public class Item {
 	private int id;
 	
 	@Column(name = "Name")
+	@NotBlank
 	private String name;
 	
 	@Column(name = "Price")

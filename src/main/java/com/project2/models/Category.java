@@ -13,10 +13,10 @@ public class Category {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="StoreId")
+	@Column(name="CategoryId")
 	private int id;
 	
-	@Column(name="StoreName")
+	@Column(name="CategoryName")
 	private String name;
 	
 	@Column(name="Description")

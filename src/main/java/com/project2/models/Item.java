@@ -31,13 +31,13 @@ public class Item {
 	@Column(name = "Price")
 	private double price;
 	
-	@OneToMany(mappedBy = "item") // DO NOT use Eager unless you 100% ALWAYS need the child record
-	@JsonIgnore // mappedBy side to prevent recursion
-	private Set<Store> store;
+	@OneToMany(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
+	@JoinColumn(name = "StoreId")
+	private Store store;
 	
-	@OneToMany(mappedBy = "item") 
-	@JsonIgnore 
-	private Set<Category> category;
+	@OneToMany(fetch = FetchType.LAZY) 
+	@JoinColumn(name = "CategoryId") 
+	private Category category;
 
 	public Item() {
 		super();
@@ -74,19 +74,19 @@ public class Item {
 		this.price = price2;
 	}
 
-	public Set<Store> getStore() {
+	public Store getStore() {
 		return store;
 	}
 
-	public void setStore(Set<Store> store) {
+	public void setStore(Store store) {
 		this.store = store;
 	}
 
-	public Set<Category> getCategory() {
+	public Category getCategory() {
 		return category;
 	}
 
-	public void setCategory(Set<Category> category) {
+	public void setCategory(Category category) {
 		this.category = category;
 	}
 

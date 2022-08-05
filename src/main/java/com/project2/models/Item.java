@@ -1,7 +1,5 @@
 package com.project2.models;
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -9,11 +7,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "Item")
@@ -31,11 +28,11 @@ public class Item {
 	@Column(name = "Price")
 	private double price;
 	
-	@OneToMany(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
+	@ManyToOne(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
 	@JoinColumn(name = "StoreId")
 	private Store store;
 	
-	@OneToMany(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY) 
 	@JoinColumn(name = "CategoryId") 
 	private Category category;
 

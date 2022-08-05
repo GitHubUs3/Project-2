@@ -22,13 +22,13 @@ insert into Store (StoreId, StoreName, Location) values (8, 'Wunsch, Metz and Wa
 insert into Store (StoreId, StoreName, Location) values (9, 'Thiel, Hamill and Block', '1 Stone Corner Way');
 insert into Store (StoreId, StoreName, Location) values (10, 'McGlynn-Paucek', '5887 Fuller Street');
 
-insert into Item (ItemId, Name, Price, storeFK, CategoryId) values (1, 'Cardguard', 45, 1, 1);
-insert into Item (ItemId, Name, Price, storeFK, CategoryId) values (2, 'Alpha', 73, 2, 2);
-insert into Item (ItemId, Name, Price, storeFK, CategoryId) values (3, 'Quo Lux', 37, 3, 3);
-insert into Item (ItemId, Name, Price, storeFK, CategoryId) values (4, 'Latlux', 52, 4, 4);
-insert into Item (ItemId, Name, Price, storeFK, CategoryId) values (5, 'Job', 50, 5, 5);
-insert into Item (ItemId, Name, Price, storeFK, CategoryId) values (6, 'Y-find', 83, 6, 6);
-insert into Item (ItemId, Name, Price, storeFK, CategoryId) values (7, 'Ronstring', 41, 7, 7);
-insert into Item (ItemId, Name, Price, storeFK, CategoryId) values (8, 'Tresom', 84, 8, 8);
-insert into Item (ItemId, Name, Price, storeFK, CategoryId) values (9, 'Cardguard', 100, 9, 9);
-insert into Item (ItemId, Name, Price, storeFK, CategoryId) values (10, 'Holdlamis', 69, 10, 10);
+insert into Item (ItemId, Name, Price, StoreId, CategoryId) values (1, 'Cardguard', 45, 1, 1);
+insert into Item (ItemId, Name, Price, StoreId, CategoryId) values (2, 'Alpha', 73, 2, 2);
+insert into Item (ItemId, Name, Price, StoreId, CategoryId) values (3, 'Quo Lux', 37, 3, 3);
+insert into Item (ItemId, Name, Price, StoreId, CategoryId) values (4, 'Latlux', 52, 4, 4);
+insert into Item (ItemId, Name, Price, StoreId, CategoryId) values (5, 'Job', 50, 5, 5);
+insert into Item (ItemId, Name, Price, StoreId, CategoryId) values (6, 'Y-find', 83, 6, 6);
+insert into Item (ItemId, Name, Price, StoreId, CategoryId) values (7, 'Ronstring', 41, 7, 7);
+insert into Item (ItemId, Name, Price, StoreId, CategoryId) values (8, 'Tresom', 84, 8, 8);
+insert into Item (ItemId, Name, Price, StoreId, CategoryId) values (9, 'Cardguard', 100, 9, 9);
+insert into Item (ItemId, Name, Price, StoreId, CategoryId) values (10, 'Holdlamis', 69, 10, 10);

@@ -16,6 +16,6 @@ create table Item (
 	ItemId INT auto_increment,
 	Name VARCHAR(50),
 	Price INT,
-	storeFK INT,
+	StoreId INT,
 	CategoryId INT
 );

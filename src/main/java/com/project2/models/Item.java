@@ -23,7 +23,7 @@ public class Item {
 	private String name;
 	
 	@Column(name = "Price")
-	private double price;
+	private float price;
 	
 	//@Column(name = "StoreId")
 	@ManyToOne(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
@@ -39,7 +39,7 @@ public class Item {
 		super();
 	}
 
-	public Item(int id, String name, double price, Store store, Category category) {
+	public Item(int id, String name, float price, Store store, Category category) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -68,7 +68,7 @@ public class Item {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
 

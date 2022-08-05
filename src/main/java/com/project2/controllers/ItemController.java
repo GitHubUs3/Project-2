@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.project2.models.Category;
 import com.project2.models.Item;
+import com.project2.models.Store;
 import com.project2.repositories.ItemRepository;
 
 @RestController
@@ -29,13 +31,13 @@ public class ItemController {
 	}
 	
 	@PostMapping("/add")
-	public void addItemToBD(@RequestParam int id,  @RequestParam String name, @RequestParam double price) {
+	public void addItemToBD(@RequestParam int id, @RequestParam String name, @RequestParam double price, @RequestParam Store store, @RequestParam Category category) {
 		Item newItem = new Item();
-		newItem.setId(0);
-		newItem.setName(null);
-		newItem.setPrice(0);
-		newItem.setStore(null);
-		newItem.setCategory(null);
+		newItem.setId(id);
+		newItem.setName(name);
+		newItem.setPrice(price);
+		newItem.setStore(store);
+		newItem.setCategory(category);
 		
 		itemRepository.save(newItem);
 	}

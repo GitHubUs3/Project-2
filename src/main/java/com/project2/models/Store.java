@@ -6,6 +6,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -25,6 +26,7 @@ public class Store {
 	private String location;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "storeFK")
 	private Item item;
 
 	public Store() {

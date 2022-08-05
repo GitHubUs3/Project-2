@@ -6,6 +6,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -25,6 +26,7 @@ public class Category {
 	private String description;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "categoryFK")
 	private Item item;
 
 	public Category() {

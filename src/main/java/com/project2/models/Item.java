@@ -27,12 +27,10 @@ public class Item {
 	@Column(name = "Price")
 	private double price;
 	
-	@OneToMany() // DO NOT use Eager unless you 100% ALWAYS need the child record
-	@JoinColumn(name = "storeFK")
+	@OneToMany(mappedBy = "item") // DO NOT use Eager unless you 100% ALWAYS need the child record
 	private Set<Store> store;
 	
-	@OneToMany(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
-	@JoinColumn(name = "categoryFK")
+	@OneToMany(mappedBy = "item") // DO NOT use Eager unless you 100% ALWAYS need the child record
 	private Set<Category> category;
 
 	public Item() {

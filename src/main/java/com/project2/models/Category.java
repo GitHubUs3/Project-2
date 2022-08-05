@@ -2,9 +2,11 @@ package com.project2.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,6 +23,9 @@ public class Category {
 	
 	@Column(name="Description")
 	private String description;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	private Item item;
 
 	public Category() {
 		super();

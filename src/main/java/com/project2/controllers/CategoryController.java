@@ -15,7 +15,7 @@ import com.project2.repositories.CategoryRepository;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/store")
+@RequestMapping("/category")
 public class CategoryController {
 
 	private CategoryRepository categoryRepository;

@@ -2,6 +2,7 @@ package com.project2.controllers;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,7 @@ import com.project2.repositories.CategoryRepository;
 @RequestMapping("/category")
 public class CategoryController {
 
+	@Autowired
 	private CategoryRepository categoryRepository;
 	
 	@GetMapping

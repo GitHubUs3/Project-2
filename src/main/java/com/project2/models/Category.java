@@ -14,6 +14,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "Category")
 public class Category {
@@ -30,8 +32,8 @@ public class Category {
 	@Column(name="Description")
 	private String description;
 	
-	@OneToMany(fetch = FetchType.LAZY)
-	@JoinColumn(name = "categoryFK")
+	@OneToMany(mappedBy = "category")
+	@JsonIgnore // mappedBy side to prevent recursion
 	private Set<Item> item;
 
 	public Category() {

@@ -1,15 +1,18 @@
 package com.project2.models;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "Store")
@@ -27,9 +30,9 @@ public class Store {
 	@Column(name="Location")
 	private String location;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "storeFK")
-	private Item item;
+	@OneToMany(mappedBy = "store")
+	@JsonIgnore // mappedBy side to prevent recursion
+	private Set<Item> item;
 
 	public Store() {
 		super();

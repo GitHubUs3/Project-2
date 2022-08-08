@@ -20,7 +20,7 @@ public class Store {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="StoreId")
+	@Column(name="id")
 	private int id;
 	
 	@Column(name="StoreName")
@@ -30,7 +30,7 @@ public class Store {
 	@Column(name="Location")
 	private String location;
 	
-	@OneToMany(mappedBy = "StoreId")
+	@OneToMany(mappedBy = "Store")
 	@JsonIgnore // mappedBy side to prevent recursion
 	private Set<Item> item;
 

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.project2.models.Category;
 import com.project2.models.Item;
 import com.project2.models.Store;
@@ -21,6 +22,7 @@ import com.project2.repositories.ItemRepository;
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping("/item")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class ItemController {
 
 	@Autowired

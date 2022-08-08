@@ -8,9 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "Item")
@@ -30,10 +31,12 @@ public class Item {
 	
 	@ManyToOne(fetch = FetchType.LAZY) // DO NOT use Eager unless you 100% ALWAYS need the child record
 	@JoinColumn(name = "StoreId")
+	@JsonIgnore
 	private Store store;
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
 	@JoinColumn(name = "CategoryId") 
+	@JsonIgnore
 	private Category category;
 
 	public Item() {

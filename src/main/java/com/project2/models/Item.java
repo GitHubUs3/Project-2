@@ -89,7 +89,8 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "Item [id=" + id + ", name=" + name + ", price=" + price + "]"; // do not include mappedBy variables
+		return "Item [id=" + id + ", name=" + name + ", price=" + price + ", store=" + store + ", category=" + category
+				+ "]";
 	}
 	
 	

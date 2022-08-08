@@ -22,7 +22,7 @@ public class Category {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="CategoryId")
+	@Column(name="Id")
 	private int id;
 	
 	@Column(name="CategoryName")
@@ -32,7 +32,7 @@ public class Category {
 	@Column(name="Description")
 	private String description;
 	
-	@OneToMany(mappedBy = "CategoryId")
+	@OneToMany(mappedBy = "category")
 	@JsonIgnore // mappedBy side to prevent recursion
 	private Set<Item> item;
 

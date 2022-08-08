@@ -1,19 +1,19 @@
 -- create tables
 
 create table Category (
-	CategoryId INT auto_increment,
+	CategoryId INT,
 	CategoryName VARCHAR(50),
 	Description TEXT
 );
 
 create table Store (
-	StoreId INT auto_increment,
+	StoreId INT,
 	StoreName VARCHAR(50),
 	Location VARCHAR(50)
 );
 
 create table Item (
-	ItemId INT auto_increment,
+	ItemId INT,
 	Name VARCHAR(50),
 	Price INT,
 	StoreId INT,

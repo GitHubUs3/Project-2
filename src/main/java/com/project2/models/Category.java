@@ -32,7 +32,7 @@ public class Category {
 	@Column(name="Description")
 	private String description;
 	
-	@OneToMany(mappedBy = "category")
+	@OneToMany(mappedBy = "CategoryId")
 	@JsonIgnore // mappedBy side to prevent recursion
 	private Set<Item> item;
 

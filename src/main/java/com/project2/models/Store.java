@@ -30,7 +30,7 @@ public class Store {
 	@Column(name="Location")
 	private String location;
 	
-	@OneToMany(mappedBy = "store")
+	@OneToMany(mappedBy = "StoreId")
 	@JsonIgnore // mappedBy side to prevent recursion
 	private Set<Item> item;
 
